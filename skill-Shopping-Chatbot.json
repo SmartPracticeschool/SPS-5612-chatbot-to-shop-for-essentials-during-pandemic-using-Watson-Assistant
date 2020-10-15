@@ -1,0 +1,1335 @@
+{
+  "intents": [
+    {
+      "intent": "Enquiry",
+      "examples": [
+        {
+          "text": "discount price items"
+        },
+        {
+          "text": "Give me list of items"
+        },
+        {
+          "text": "Give me the list of products"
+        },
+        {
+          "text": "i want to buy Bakery items"
+        },
+        {
+          "text": "i want to buy fruits"
+        },
+        {
+          "text": "i want to buy Personal care items"
+        },
+        {
+          "text": "i want to buy Snacks"
+        },
+        {
+          "text": "i want to buy staples"
+        },
+        {
+          "text": "i want to buy vegetables"
+        },
+        {
+          "text": "List of items"
+        },
+        {
+          "text": "List of products"
+        },
+        {
+          "text": "offers are available?"
+        },
+        {
+          "text": "products"
+        },
+        {
+          "text": "staples"
+        },
+        {
+          "text": "What are discount offers"
+        },
+        {
+          "text": "What are the discounted items today"
+        },
+        {
+          "text": "What are the discounts today?"
+        },
+        {
+          "text": "What are the offers available"
+        },
+        {
+          "text": "What do you sell"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "GoodBye",
+      "examples": [
+        {
+          "text": "adios"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "c u"
+        },
+        {
+          "text": "cya"
+        },
+        {
+          "text": "Good Bye"
+        },
+        {
+          "text": "See you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "namaste"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Order",
+      "examples": [
+        {
+          "text": "I want to place an order"
+        },
+        {
+          "text": "order"
+        },
+        {
+          "text": "please take my order"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ThankYou",
+      "examples": [
+        {
+          "text": "appreciate it"
+        },
+        {
+          "text": "cheers"
+        },
+        {
+          "text": "great!"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "thx"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "address",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "address",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "contactno",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "contactno",
+          "synonyms": [
+            "mobileno"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "continue",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bakery",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dairy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Fruits",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "deals",
+            "discounts"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Personal care",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "products",
+          "synonyms": [
+            "items",
+            "list of items"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Snacks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "specials",
+          "synonyms": [
+            "special items"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Staples",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vegetables",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "ga",
+            "good after"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "ge",
+            "good evening"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "gm",
+            "gud morning"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "items",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Amul Fresh Paneer 200 g",
+          "synonyms": [
+            "Paneer"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Amul Lite Milk Fat Spread",
+          "synonyms": [
+            "Spread"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Amul Pasteurised Butter 500 g",
+          "synonyms": [
+            "Butter"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Bhendi (Okra) per 500 g",
+          "synonyms": [
+            "Bhindi"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Bottle Gourd 1 kg",
+          "synonyms": [
+            "Lauki"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Britannia 100% Whole Wheat Bread",
+          "synonyms": [
+            "Bread"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cabbage 1 pc",
+          "synonyms": [
+            "Cabbage"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Chana Dal 2 kg",
+          "synonyms": [
+            "Dal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Clean & Clear Foaming Face Wash 150 ml",
+          "synonyms": [
+            "Face Wash"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cucumber 500 g",
+          "synonyms": [
+            "Cucumber"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Life Raw Peanuts",
+          "synonyms": [
+            "Peanuts"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Himalaya Purifying Neem Face Wash 100 ml",
+          "synonyms": [
+            "Facewash"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Loose Chana Dal",
+          "synonyms": [
+            "Chana Dal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Maida Pizza Base Bread 250",
+          "synonyms": [
+            "Pizza"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Patanjali Saundarya Aloe Vera Gel",
+          "synonyms": [
+            "Aloe Face Wash"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pond's Dreamflower Pink Lily Fragrant Talc 400 g",
+          "synonyms": [
+            "Powder"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pond's Pure White Anti Pollution + Purity Face Wash",
+          "synonyms": [
+            "Facewash"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Potato per kg",
+          "synonyms": [
+            "Potato"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Tata Sampann High Protein Unpolished Tur / Arhar Dal",
+          "synonyms": [
+            "Dal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Tur / Arhar Dal 2 kg",
+          "synonyms": [
+            "Tur Dal"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "name",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "name",
+          "patterns": [
+            "[A-Za-z]+"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "purchase"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "COD",
+          "synonyms": [
+            "Cash On Delivery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "products",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Dairy & Bakery",
+          "synonyms": [
+            "Bakery",
+            "Dairy"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Personal Care",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Snacks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Staples",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vegetables & Fruits",
+          "synonyms": [
+            "Fruits",
+            "Vegetables"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "specials",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Chicken Wings",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chinese Rice",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Noodles",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Vegetables_Fruits",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Fruits",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vegetables",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_8_1601385079218",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "We accept COD,Card, UPI . What is your mode of payment??"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1602746726981",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1602746726988",
+      "previous_sibling": "handler_7_1602746726988"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_8_1601385079218",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1601385434369"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Can you provide me the item you want?You can check products if you want."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1601385435518",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1601385435542",
+      "previous_sibling": "handler_2_1601385435542"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1601385435518",
+      "context": {
+        "items": "@items"
+      },
+      "conditions": "@items",
+      "event_name": "input",
+      "dialog_node": "handler_2_1601385435542"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Do you want more(yes/no)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1602743747779",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1602743747790",
+      "previous_sibling": "handler_6_1602743747790"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many do you want ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1601386338967",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1601386338972",
+      "previous_sibling": "handler_8_1601386338972"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1602743747779",
+      "context": {
+        "continue": "@continue"
+      },
+      "conditions": "@continue",
+      "event_name": "input",
+      "dialog_node": "handler_6_1602743747790"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1602746726981",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_7_1602746726988"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1601386338967",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1601386338972"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello thank you for giving your email id. Your mail ID $email is used for further references"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_10_1601388493782"
+    },
+    {
+      "type": "standard",
+      "title": "Staples",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "1)Loose Chana Dal 1 kg   ₹ 77.00\n2) Good Life Raw Peanuts 500 g    ₹ 75.00\n3)Tur / Arhar Dal 2 kg ₹ 222.00\n4)Tata Sampann High Protein Unpolished Tur / Arhar Dal 1 ₹ 125.00\n5)Chana Dal 2 kg       ₹ 154.00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1601382819092",
+      "conditions": "@products:Staples",
+      "dialog_node": "node_10_1602733974465",
+      "previous_sibling": "node_1_1602661601109"
+    },
+    {
+      "type": "standard",
+      "title": "Bakery",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "1 )Amul Pasteurised Butter 500 g   ₹ 218.00\n2) Amul Fresh Paneer 200 g (Pack)  ₹68\n3) Amul Lite Milk Fat Spread 500 g (Carton)  ₹ 181.35\n4) Britannia 100% Whole Wheat Bread 400 g   ₹ 37.20\n5)Maida Pizza Base Bread 250 g   ₹27.90"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1601382819092",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@products:(Dairy & Bakery)",
+      "dialog_node": "node_1_1602661601109",
+      "previous_sibling": "node_5_1602655524207"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greetings || @greetings",
+      "dialog_node": "node_3_1601380521552",
+      "previous_sibling": "node_5_1602583428413"
+    },
+    {
+      "type": "standard",
+      "title": "ThankYou",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thanks for shopping at Elena's Suppliers! Please visit again for more personalized offers !"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ThankYou",
+      "dialog_node": "node_5_1602583428413",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Vegetables&Fruits",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "1 )Bhendi per 500 g   35₹\n2)Bottle Gourd 1 kg    29₹\n3)Cabbage 1 pc            20₹\n4)Cucumber 500 g      30₹\n5)Potato per kg            35₹ "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1601382819092",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@products:(Vegetables & Fruits) || @Vegetables_Fruits",
+      "dialog_node": "node_5_1602655524207",
+      "previous_sibling": "node_8_1601384372789"
+    },
+    {
+      "type": "standard",
+      "title": "Enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Enquiry || @enquiry || @Vegetables_Fruits",
+      "digress_in": "returns",
+      "dialog_node": "node_6_1601382819092",
+      "digress_out": "allow_all_never_return",
+      "previous_sibling": "node_6_1602583513777"
+    },
+    {
+      "type": "standard",
+      "title": "GoodBye",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bye! Visit again for more offers and discounts with simplest and sophisticated shopping experience!  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#GoodBye",
+      "dialog_node": "node_6_1602583513777",
+      "previous_sibling": "node_3_1601380521552"
+    },
+    {
+      "type": "standard",
+      "title": "Specials",
+      "parent": "node_6_1601382819092",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@specials",
+      "dialog_node": "node_8_1601384372789"
+    },
+    {
+      "type": "frame",
+      "title": "order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you,\nyour order of  $number of $items is placed. \nPlease pay using $payment .  your receipt is sent to $email  ......"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#Order && @order:order",
+      "digress_in": "returns",
+      "dialog_node": "node_8_1601385079218",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_6_1601382819092",
+      "digress_out_slots": "allow_returning"
+    },
+    {
+      "type": "standard",
+      "title": "PersonalCare",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "1)Pond's Dreamflower Pink Lily Fragrant Talc 400 g    ₹ 230.00\n2)Patanjali Saundarya Aloe Vera Gel 150 ml    ₹ 230.00\n3)Clean & Clear Foaming Face Wash 150 ml ₹ 230.00\n4)Himalaya Purifying Neem Face Wash 100 ml ₹ 230.00\n5)Pond's Pure White Anti Pollution + Purity Face Wash ₹ 230.00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1601382819092",
+      "conditions": "@products:(Personal Care)",
+      "dialog_node": "node_8_1602734753252",
+      "previous_sibling": "node_10_1602733974465"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601380521552",
+      "conditions": "@greetings:(Good Evening)",
+      "dialog_node": "response_10_1601380987712",
+      "previous_sibling": "response_5_1601380892699"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "250Rs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1601384372789",
+      "conditions": "@specials:(Chicken Wings)",
+      "dialog_node": "response_2_1601384505145"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "",
+            "options": [],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1602661601109",
+      "disabled": true,
+      "conditions": "",
+      "dialog_node": "response_2_1602661601118"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 200/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1601384372789",
+      "conditions": "@specials:Noodles",
+      "dialog_node": "response_3_1601384532690",
+      "previous_sibling": "response_2_1601384505145"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601380521552",
+      "conditions": "@greetings:(good afternoon)",
+      "dialog_node": "response_4_1601381006917",
+      "previous_sibling": "response_10_1601380987712"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "List of Items",
+            "options": [
+              {
+                "label": "Fruits & Vegetables",
+                "value": {
+                  "input": {
+                    "text": "Vegetables & Fruits"
+                  }
+                }
+              },
+              {
+                "label": "Dairy & Bakery",
+                "value": {
+                  "input": {
+                    "text": "Dairy & Bakery"
+                  }
+                }
+              },
+              {
+                "label": "Staples",
+                "value": {
+                  "input": {
+                    "text": "Staples"
+                  }
+                }
+              },
+              {
+                "label": "Snacks",
+                "value": {
+                  "input": {
+                    "text": "Snacks"
+                  }
+                }
+              },
+              {
+                "label": "Personal Care",
+                "value": {
+                  "input": {
+                    "text": "Personal Care"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1601382819092",
+      "conditions": "@enquiry:(products)",
+      "dialog_node": "response_4_1601382941524",
+      "previous_sibling": "node_8_1602734753252"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "33% off Lotte Choco Pie Creamfilled Biscuit 336 g \n22% off on Good Life Mixed Dry Fruits 500 g \n25% off Good Life Almonds 500 g"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://i.ibb.co/0QysFLf/4.jpg",
+            "response_type": "image"
+          },
+          {
+            "source": "https://i.ibb.co/Cnk7FV7/3.jpg",
+            "response_type": "image"
+          },
+          {
+            "source": "https://i.ibb.co/2tKbkZz/2.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_6_1601382819092",
+      "conditions": "@enquiry:offers",
+      "dialog_node": "response_4_1601383327955",
+      "previous_sibling": "response_4_1601382941524"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "300Rs/"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1601384372789",
+      "conditions": "@specials:(Chinese Rice)",
+      "dialog_node": "response_4_1601384549756",
+      "previous_sibling": "response_3_1601384532690"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good morning!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601380521552",
+      "conditions": "@greetings:(Good Morning)",
+      "dialog_node": "response_5_1601380892699"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Special items",
+            "options": [
+              {
+                "label": "Noodles",
+                "value": {
+                  "input": {
+                    "text": "Noodles"
+                  }
+                }
+              },
+              {
+                "label": "Veg Briyani",
+                "value": {
+                  "input": {
+                    "text": "Veg Briyani"
+                  }
+                }
+              },
+              {
+                "label": "Chinese Rice",
+                "value": {
+                  "input": {
+                    "text": "Chinese Rice"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1601382819092",
+      "conditions": "@enquiry:specials",
+      "dialog_node": "response_6_1601383589721",
+      "previous_sibling": "response_4_1601383327955"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601380521552",
+      "conditions": "anything_else",
+      "dialog_node": "response_9_1601381104303",
+      "previous_sibling": "response_4_1601381006917"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602655524207",
+      "disabled": true,
+      "conditions": "",
+      "dialog_node": "response_9_1602661181375"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1601385079218",
+      "variable": "$number",
+      "dialog_node": "slot_10_1601386338967",
+      "previous_sibling": "slot_8_1601385435518"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_8_1601385079218",
+      "variable": "$payment",
+      "dialog_node": "slot_10_1602746726981",
+      "previous_sibling": "slot_2_1602743747779"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1601385079218",
+      "variable": "$continue",
+      "dialog_node": "slot_2_1602743747779",
+      "previous_sibling": "slot_10_1601386338967"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1601385079218",
+      "variable": "$items",
+      "dialog_node": "slot_8_1601385435518",
+      "previous_sibling": "handler_1_1601385434369"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. I am a e-commerce ChatBot capable of showing List of items, find offers, place orders. How may I help you? please provide me with your mail ID"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Then Type <u>products</u> to get started!  When you are ready to order let me know!  ;)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "i want to buy fruits"
+    },
+    {
+      "text": "staples"
+    }
+  ],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Shopping Chatbot",
+  "language": "en",
+  "description": ""
+}
